@@ -9,10 +9,10 @@ public class Surcursal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProducto;
 
-    @Column(name = "nameProducto")
+    @Column(name = "nameProducto", nullable = false, length = 200)
     private String nombreProducto;
 
-    @Column(name = "referencia")
+    @Column(name = "referencia", nullable = false, length = 200)
     private String referencia;
 
 

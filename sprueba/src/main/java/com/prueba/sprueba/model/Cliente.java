@@ -25,12 +25,14 @@ public class Cliente {
     @Column(name = "telefono", nullable = false, length = 200)
     private String telefono;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "idProducto")
     private Surcursal surcursal;
-    @OneToMany
-    @JoinColumn(name = "id")
+
+    @ManyToOne
+    @JoinColumn(name = "idEstado")
     private Estado estado;
+
 
     public Long getIdCliente() {
         return idCliente;
@@ -78,5 +80,21 @@ public class Cliente {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Surcursal getSurcursal() {
+        return surcursal;
+    }
+
+    public void setSurcursal(Surcursal surcursal) {
+        this.surcursal = surcursal;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
     }
 }
