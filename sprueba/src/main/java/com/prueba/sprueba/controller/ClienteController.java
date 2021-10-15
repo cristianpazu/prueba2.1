@@ -15,7 +15,8 @@ public class ClienteController {
 
     @GetMapping
     public List<Cliente> findAll(){
-        return  clienteService.findAll();//nos retorna un lista de servici
+        return  clienteService.findAll();//nos retorna un lista de servicios 
+        //dsfsdfsdfsdfsdfsfsdfsfsdfsdfdfdsfsdfs
     }
     @PostMapping
     public Cliente create(@RequestBody Cliente cliente){
