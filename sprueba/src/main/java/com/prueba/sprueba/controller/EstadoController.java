@@ -1,9 +1,7 @@
 package com.prueba.sprueba.controller;
 
 import com.prueba.sprueba.model.Estado;
-import com.prueba.sprueba.model.Surcursal;
 import com.prueba.sprueba.service.EstadoService;
-import com.prueba.sprueba.service.SurcursalServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

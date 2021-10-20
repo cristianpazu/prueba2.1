@@ -1,10 +1,13 @@
 package com.prueba.sprueba.controller;
 
-import com.prueba.sprueba.model.Cliente;
 import com.prueba.sprueba.model.Surcursal;
-import com.prueba.sprueba.service.SurcursalServices;
+import com.prueba.sprueba.service.SurcursalService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -13,15 +16,16 @@ import java.util.List;
 public class SurcursalController {
 
     @Autowired
-    private SurcursalServices surcursalServices;
+    private SurcursalService surcursalService;
 
-     @GetMapping
-    public List<Surcursal> findAll(){
-        return  surcursalServices.findAll();//nos retorna un lista de servici
+    @GetMapping
+    public List<Surcursal> findAll() {
+        return surcursalService.findAll();//nos retorna un lista de servici
     }
+
     @PostMapping
-    public Surcursal create(@RequestBody Surcursal surcursal){
-        return surcursalServices.create(surcursal);
+    public Surcursal create(@RequestBody Surcursal surcursal) {
+        return surcursalService.create(surcursal);
     }
 
 }
